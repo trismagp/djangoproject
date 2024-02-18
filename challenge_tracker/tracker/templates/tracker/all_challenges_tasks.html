@@ -1,0 +1,12 @@
+
+<h1>All Challenges and Tasks</h1>
+
+{% for challenge, tasks in challenge_tasks.items %}
+    <h2>{{ challenge.name }}</h2>
+    <ul>
+        {% for task in tasks %}
+            <li>{{ task.task_name }} - {{ task.description }}</li>
+        {% endfor %}
+    </ul>
+{% endfor %}
+
